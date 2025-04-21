@@ -41,7 +41,7 @@ conda install -r requirements.txt
 ```
 3. 启动应用：
 ```bash
-flask run
+python app.py
 ```
 4. 访问应用：
 打开浏览器访问 
