@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>创建新广告</h2>
+<form method="POST" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+    
+    <div class="mb-3">
+        {{ form.title.label(class="form-label") }}
+        {{ form.title(class="form-control") }}
+    </div>
+    
+    <div class="mb-3">
+        {{ form.description.label(class="form-label") }}
+        {{ form.description(class="form-control", rows=4) }}
+    </div>
+    
+    <div class="row mb-3">
+        <div class="col">
+            {{ form.price.label(class="form-label") }}
+            {{ form.price(class="form-control") }}
+        </div>
+        <div class="col">
+            {{ form.category.label(class="form-label") }}
+            {{ form.category(class="form-select") }}
+        </div>
+    </div>
+    
+    <div class="mb-3">
+        {{ form.contact.label(class="form-label") }}
+        {{ form.contact(class="form-control") }}
+    </div>
+    
+    <div class="mb-3">
+        <label for="image" class="form-label">广告图片</label>
+        <input type="file" class="form-control" id="image" name="image">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">提交</button>
+</form>
+{% endblock %}

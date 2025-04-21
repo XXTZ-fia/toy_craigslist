@@ -1,0 +1,44 @@
+name: mongodb
+channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+  - defaults
+dependencies:
+  - bzip2=1.0.8=h2466b09_7
+  - ca-certificates=2025.1.31=h56e8100_0
+  - libexpat=2.7.0=he0c23c2_0
+  - libffi=3.4.6=h537db12_1
+  - liblzma=5.8.1=h2466b09_0
+  - libsqlite=3.49.1=h67fdade_2
+  - libzlib=1.3.1=h2466b09_2
+  - openssl=3.5.0=ha4e3fda_0
+  - pip=25.0.1=pyh8b19718_0
+  - python=3.9.22=hfdde91d_1_cpython
+  - setuptools=78.1.1=pyhff2d567_0
+  - tk=8.6.13=h5226925_1
+  - tzdata=2025b=h78e105d_0
+  - ucrt=10.0.22621.0=h57928b3_1
+  - vc=14.3=h2b53caa_26
+  - vc14_runtime=14.42.34438=hfd919c2_26
+  - wheel=0.45.1=pyhd8ed1ab_1
+  - pip:
+      - blinker==1.9.0
+      - click==8.1.8
+      - colorama==0.4.6
+      - dnspython==2.7.0
+      - flask==3.1.0
+      - flask-pymongo==2.3.0
+      - flask-wtf==1.2.2
+      - importlib-metadata==8.6.1
+      - itsdangerous==2.2.0
+      - jinja2==3.1.6
+      - markupsafe==3.0.2
+      - pillow==11.2.1
+      - pymongo==4.3.3
+      - python-dotenv==1.1.0
+      - werkzeug==3.1.3
+      - wtforms==3.2.1
+      - zipp==3.21.0
+prefix: D:\anaconda3\envs\mongodb

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card mb-4">
+    <div class="row g-0">
+        {% if ad.image %}
+        <div class="col-md-5">
+            <img src="{{ url_for('static', filename=ad.image) }}" class="img-fluid rounded-start" style="max-height: 500px; width: 100%; object-fit: cover;">
+        </div>
+        {% endif %}
+        <div class="col-md-7">
+            <div class="card-body">
+                <h1 class="card-title">{{ ad.title }}</h1>
+                <p class="text-muted mb-3">{{ ad.category }} • {{ ad.created_at.strftime('%Y-%m-%d %H:%M') }} • 浏览 {{ ad.views }}次</p>
+                <h3 class="text-danger mb-4">¥{{ ad.price }}</h3>
+                
+                <div class="card-text mb-4" style="white-space: pre-line;">{{ ad.description }}</div>
+                
+                <div class="card bg-light p-3">
+                    <h5>联系方式</h5>
+                    <p class="mb-0">{{ ad.contact }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mt-4">
+    <form action="{{ url_for('delete_ad', ad_id=ad._id) }}" method="POST">
+        <button type="submit" class="btn btn-danger" 
+                onclick="return confirm('确定要删除这个广告吗？此操作不可撤销！')">
+            删除广告
+        </button>
+    </form>
+</div>
+<a href="{{ url_for('home') }}" class="btn btn-outline-secondary">返回列表</a>
+{% endblock %}
